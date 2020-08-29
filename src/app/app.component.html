@@ -1,6 +1,9 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" (click)="goback()">
   <mat-toolbar-row>
     <span>Books APP - Angular Frontend + API made with Ruby on Rails</span>
+    <button mat-raised-button color="accent" (click)="clickbutton()">
+      Info
+    </button>
   </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>

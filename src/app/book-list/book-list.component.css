@@ -3,6 +3,7 @@ div {
   flex-direction: row;
   flex-wrap: wrap;
   padding-bottom: 50px;
+  justify-content: center;
 }
 mat-card {
   display: flex;
@@ -13,4 +14,7 @@ mat-card {
 mat-card-title {
   margin: 10px;
   font-size: 26px;
+}
+mat-card:hover {
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
 }
