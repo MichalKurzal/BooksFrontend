@@ -1,7 +1,12 @@
 <mat-toolbar color="primary" (click)="goback()">
   <mat-toolbar-row>
     <span>Books APP - Angular Frontend + API made with Ruby on Rails</span>
-    <button mat-raised-button color="accent" (click)="clickbutton()">
+    <button
+      mat-raised-button
+      color="accent"
+      (click)="clickbutton()"
+      (click)="$event.stopPropagation()"
+    >
       Info
     </button>
   </mat-toolbar-row>
