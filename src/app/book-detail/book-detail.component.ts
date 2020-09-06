@@ -15,7 +15,7 @@ interface Book {
 })
 export class BookDetailComponent implements OnInit {
   id: any;
-  book: any;
+  book: Book;
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -25,8 +25,13 @@ export class BookDetailComponent implements OnInit {
       this.http
         .get<Book[]>('http://localhost:3000/books/' + this.id)
         .toPromise()
-        .then((res) => {
-          this.book = res;
+        .then((res: any) => {
+          this.book = {
+            titel: res.titel,
+            autor: res.autor,
+            seiten: res.seiten,
+            Erscheinungsjahr: res.Erscheinungsjahr,
+          };
           console.log(this.book);
         });
     });

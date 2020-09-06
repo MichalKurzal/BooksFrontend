@@ -16,6 +16,9 @@ export class AppComponent implements OnInit {
 
   goback() {
     this.router.navigate(['/books']);
+    if (this.router.url === '/books') {
+      this._snackBar.open('You are already there', 'Ok');
+    }
   }
   clickbutton() {
     this._snackBar.open(
