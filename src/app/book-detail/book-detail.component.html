@@ -1,9 +1,17 @@
 <div>
-  <img src="assets/book.png" />
-  <h1>Titel : {{ book?.titel }}</h1>
-  <h2>Autor: {{ book?.autor }}</h2>
-
-  <h2>Seiten : {{ book?.seiten }}</h2>
-
-  <h2>Erscheinungsjahr : {{ book?.Erscheinungsjahr }}</h2>
+  <mat-card>
+    <mat-card-header>
+      <img src="assets/book.png" />
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-subtitle>Titel</mat-card-subtitle>
+      <mat-card-title>{{ book?.titel }}</mat-card-title>
+      <mat-card-subtitle>Autor</mat-card-subtitle>
+      <mat-card-title>{{ book?.autor }}</mat-card-title>
+      <mat-card-subtitle>Seiten</mat-card-subtitle>
+      <mat-card-title>{{ book?.seiten }}</mat-card-title>
+      <mat-card-subtitle>Erscheinungsjahr</mat-card-subtitle>
+      <mat-card-title> {{ book?.Erscheinungsjahr }}</mat-card-title>
+    </mat-card-content>
+  </mat-card>
 </div>
