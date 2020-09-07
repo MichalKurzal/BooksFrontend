@@ -3,16 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-interface Book {
-  id: number;
-  titel: string;
-  autor: string;
-  seiten: number;
-  Erscheinungsjahr: number;
-}
-interface Books {
-  Books: Book[];
-}
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
@@ -20,7 +10,7 @@ interface Books {
 })
 export class BookListComponent implements OnInit {
   title = 'books-frontend';
-  books: Books;
+  books: any;
   constructor(
     private http: HttpClient,
     public router: Router,
@@ -29,7 +19,7 @@ export class BookListComponent implements OnInit {
 
   ngOnInit() {
     this.http
-      .get<Books[]>('http://localhost:3000/books')
+      .get('http://localhost:3000/books')
       .toPromise()
       .then((res: any) => {
         this.books = res;
